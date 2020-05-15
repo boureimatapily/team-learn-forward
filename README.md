@@ -20,6 +20,10 @@ Talk about what problem this solves, what SDG(s) and SGD targets it addresses an
 
 List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project.
 
+Boureima Tapily (Team Lead ) https://github.com/boureimatapily  https://www.linkedin.com/in/boureima-tapily-aab12217a/ https://twitter.com/BoureimaTAPILY9
+
+
+
 
 ## Acknowledgements
 
