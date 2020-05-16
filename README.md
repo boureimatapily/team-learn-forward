@@ -1,6 +1,6 @@
 ## YOUR PROJECT NAME
 
-A one-liner phrase describing this project or app
+Learn Forward - Learn for better Africa
 
 
 ## About
