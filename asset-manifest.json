@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/boureimatapily/team-learn-forward/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/boureimatapily/team-learn-forward/static/js/main.74480116.chunk.js",
+    "main.js.map": "/boureimatapily/team-learn-forward/static/js/main.74480116.chunk.js.map",
+    "runtime-main.js": "/boureimatapily/team-learn-forward/static/js/runtime-main.85a7f5ca.js",
+    "runtime-main.js.map": "/boureimatapily/team-learn-forward/static/js/runtime-main.85a7f5ca.js.map",
+    "static/js/2.a25ec15a.chunk.js": "/boureimatapily/team-learn-forward/static/js/2.a25ec15a.chunk.js",
+    "static/js/2.a25ec15a.chunk.js.map": "/boureimatapily/team-learn-forward/static/js/2.a25ec15a.chunk.js.map",
+    "index.html": "/boureimatapily/team-learn-forward/index.html",
+    "precache-manifest.515154ae7ea9878ffd872965de448190.js": "/boureimatapily/team-learn-forward/precache-manifest.515154ae7ea9878ffd872965de448190.js",
+    "service-worker.js": "/boureimatapily/team-learn-forward/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/boureimatapily/team-learn-forward/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.a25ec15a.chunk.js.LICENSE.txt": "/boureimatapily/team-learn-forward/static/js/2.a25ec15a.chunk.js.LICENSE.txt",
+    "static/media/cardimg.png": "/boureimatapily/team-learn-forward/static/media/cardimg.12140e6e.png",
+    "static/media/learn.png": "/boureimatapily/team-learn-forward/static/media/learn.2b88e413.png",
+    "static/media/mimi.PNG": "/boureimatapily/team-learn-forward/static/media/mimi.443236c0.PNG",
+    "static/media/money.png": "/boureimatapily/team-learn-forward/static/media/money.3e29c227.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85a7f5ca.js",
+    "static/js/2.a25ec15a.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.74480116.chunk.js"
+  ]
+}
