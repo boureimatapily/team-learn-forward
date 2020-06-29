@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   loginSection: {
-    width: 500,
+    width: 400,
     height: 700,
     paddingLeft: 50,
     marginTop: 20,
