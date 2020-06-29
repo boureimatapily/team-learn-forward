@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(16),
       height: theme.spacing(16),
     },
-    marginTop: 50,
+    marginTop: 5,
+    backgroundColor:"#3a3346;",
   },
   Papper1: {
     width: 300,
