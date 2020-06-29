@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+
 import Paper from "@material-ui/core/Paper";
 // import images
-import mimi from "../../Images/mimi.PNG";
+
 import cardimg from "../../Images/cardimg.png";
 import learn from "../../Images/learn.png";
 import money from "../../Images/money.png";
 
 import MainCard from "./MainContent/MainCard";
 //import { Link } from '@material-ui/core';
-import { Link } from "react-router-dom";
+
 import Welcome from "./MainContent/Welcome";
 import Section1Card from "./MainContent/Section1Card";
 //import MenuIcon from '@material-ui/icons/Menu';

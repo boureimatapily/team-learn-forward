@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import { TextField, Button, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
 
 const useStyles = makeStyles((theme) => ({
   root: {

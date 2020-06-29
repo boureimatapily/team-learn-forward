@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 //import { Link } from '@material-ui/core';
 import { Link } from "react-router-dom";
 //import MenuIcon from '@material-ui/icons/Menu';
-import logo from "../Images/logo.PNG"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
