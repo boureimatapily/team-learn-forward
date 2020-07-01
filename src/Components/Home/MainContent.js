@@ -2,89 +2,77 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Paper from "@material-ui/core/Paper";
-// import images
-
-import cardimg from "../../Images/cardimg.png";
-import learn from "../../Images/learn.png";
-import money from "../../Images/money.png";
 
 import MainCard from "./MainContent/MainCard";
 //import { Link } from '@material-ui/core';
 
 import Welcome from "./MainContent/Welcome";
-import Section1Card from "./MainContent/Section1Card";
+
+import { Grid, Container } from "@material-ui/core";
 //import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
-  rootPapper: {
-    display: "flex",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-    marginTop: 5,
-    backgroundColor:"#3a3346;",
-  },
-  Papper1: {
-    width: 300,
-    height: 300,
-    marginLeft: "20%",
-  },
-  Papper2: {
-    width: 400,
-    height: 400,
-    marginRight: "5%",
+  root:{
+    dislpay:"flex",
+    justifyContent:"center",
+    alignItems:"center"
   },
   imgCover: {
     height: 400,
     marginLeft: "20%",
   },
-  section1: {
-    display: "flex",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(2),
-      width: theme.spacing(10),
-      height: theme.spacing(16),
-    },
-     marginTop:20,
-      marginLeft:"10%",
+  
+  learnTitle: {
+   marginBottom:2,
+   marginLeft:15,
+   fontSize:20
   },
-  PapperSection1: {
-      width:240,
-      height:193,
-     
-  },
+  Section2:{
+    marginTop:100
+  }
+ 
 }));
 
 export default function MainContent() {
   const classes = useStyles();
+  const [spacing, setSpacing] = React.useState(2);
   return (
-    <div className={classes.root}>
-      <div className={classes.rootPapper}>
-        <Paper className={classes.Papper1}>
-          <Welcome />
-        </Paper>
-        <Paper className={classes.Papper2}>
-          <MainCard />
-        </Paper>
-      </div>
-      <div className={classes.section1}>
-        <Paper className={classes.PapperSection1}>
-          <Section1Card image={learn} infos="Interactive Courses"  link="/courses" />
-        </Paper>
-        <Paper className={classes.PapperSection1}>
-          <Section1Card image={cardimg} infos="S.T.E.M Courses" link="/courses" />
-        </Paper>
-        <Paper className={classes.PapperSection1}>
-          <Section1Card image={money} infos="Make a Donation"  link="/donation" />
-        </Paper>
-        <Paper className={classes.PapperSection1}>
-          <Section1Card image={money} infos="Investment Opportunities" link="/investment" />
-        </Paper>
-      </div>
-    </div>
+    <Container fixed>
+      <Grid container className={classes.root} spacing={1}>
+        <Grid item xs={12} md={12} lg={12}>
+          <div className={classes.rootPapper}>
+            <Welcome />
+
+          </div>
+        </Grid>
+       
+        <Grid container>
+          <Grid item xs md lg></Grid>
+          <Grid item xs={12} md={4} lg={4}>
+            <div>
+              <p>
+                <h4 className={classes.learnTitle}>Start Learning by Choosing your option </h4>
+    
+             <span>Learning is the procces of  acquiring new or modifying existing 
+              knowledge behavios skills, values or preferences </span>
+              </p>
+            
+            </div>
+          </Grid>
+          <Grid item xs md lg></Grid>
+        </Grid>
+        
+        <Grid item xs={12} md={12} lg={12}>
+          <div className={classes.Section1}>
+            <MainCard />
+          </div >
+        </Grid>
+        <Grid item xs={12} md={12} lg={12}>
+          <div className={classes.Section2}>
+            
+          </div>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }

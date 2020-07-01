@@ -16,10 +16,18 @@ import Button from "@material-ui/core/Button";
 
 //import { Link } from '@material-ui/core';
 import { Link } from "react-router-dom";
+import { Grid, Container } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+    
+     
+  },
+  appbar:{
+    backgroundColor:"#810aff",
+    color:"white",
+    fontWeight:"bolder"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -79,10 +87,15 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  navButton:{
+    backgroundColor:"gray",
+    marginRight:5
+  },
 }));
 
 export default function NavBar() {
   const classes = useStyles();
+  const [spacing, setSpacing] = React.useState(2);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -164,8 +177,9 @@ export default function NavBar() {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar position="static">
+    <Container fixed>
+      <Grid container className={classes.grow} spacing={2}>
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
         
           <Typography className={classes.title} variant="h6" noWrap>
@@ -220,6 +234,7 @@ export default function NavBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-    </div>
+      </Grid>
+      </Container>
   );
 }
