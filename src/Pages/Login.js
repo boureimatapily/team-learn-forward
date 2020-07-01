@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(16),
       height: theme.spacing(16),
     },
+    marginLeft:50,
+      marginRight:50
   },
   loginSection: {
     width: 400,
