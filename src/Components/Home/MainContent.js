@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import MainCard from "./MainContent/MainCard";
+import MainCard2 from "./MainContent/MainCard2";
 //import { Link } from '@material-ui/core';
 
 import Welcome from "./MainContent/Welcome";
@@ -66,7 +67,7 @@ export default function MainContent() {
         </Grid>
         <Grid item xs={12} md={12} lg={12}>
           <div className={classes.Section2}>
-            
+          <MainCard2 />
           </div>
         </Grid>
       </Grid>
