@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Welcome() {
   const classes = useStyles();
-  const [spacing, setSpacing] = React.useState(0);
+  // const [spacing, setSpacing] = React.useState(0);
   return (
     <Grid container className={classes.root} spacing={0}>
       <Grid item xs md lg></Grid>
@@ -65,7 +65,7 @@ export default function Welcome() {
         </Paper>
       </Grid>
       <Grid item xs={12} md={5} lg={5}>
-        <img src={mimi} className={classes.media} />
+        <img src={mimi} className={classes.media} alt="mimi "/>
       </Grid>
       <Grid item xs md lg></Grid>
     </Grid>

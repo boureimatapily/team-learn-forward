@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MainContent() {
   const classes = useStyles();
-  const [spacing, setSpacing] = React.useState(2);
+  // const [spacing, setSpacing] = React.useState(2);
   return (
     <Container fixed>
       <Grid container className={classes.root} spacing={1}>
