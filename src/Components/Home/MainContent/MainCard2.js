@@ -2,7 +2,7 @@ import React  from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
-import Section2Card from "./Section1Card";
+import Section2Card from "./Section2Card";
 // import images
 
 import cardimg from "../../../Images/cardimg.png";
@@ -11,11 +11,24 @@ import money from "../../../Images/money.png";
 import { Grid, Container } from "@material-ui/core";
 
 
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import StarBorder from '@material-ui/icons/StarBorder';
+
+
 
 const useStyles = makeStyles((theme) => ({
  root:{
    display:"flex",
-   flexGrow:1,
  },
   section1: {
     display: "flex",
@@ -25,12 +38,19 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(5),
       height: theme.spacing(5),
     },
-    marginTop: 20,
-    marginLeft: "10%",
+    height:700,
+    justifyContent:"space-around"
   },
    PapperSection1: {
-    width: 200,
-    height: 100,
+    width: 250,
+  },
+  ListRoot: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
+  nested: {
+    paddingLeft: theme.spacing(4),
   },
   
 }));
@@ -39,20 +59,63 @@ export default function MainCard2() {
   const classes = useStyles();
 
   return (
-    <Container fixed >
+      <Container fixed>
       <Grid conatiner className={classes.root}>
-        <Grid item xs={12} md={4} lg={4}>
-            <h1>hello</h1>
+        <Grid item xs={12} md={3} lg={3}>
+
+        <List
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader component="div" id="nested-list-subheader">
+          Our Categories
+        </ListSubheader>
+      }
+      className={classes.ListRoot}
+    >
+      <ListItem button>
+        {/* <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon> */}
+        <ListItemText primary="IT" />
+      </ListItem>
+      <ListItem button>
+        {/* <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon> */}
+        <ListItemText primary="Bussiness" />
+      </ListItem>
+      <ListItem button>
+        {/* <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon> */}
+        <ListItemText primary="Maths" />
+      </ListItem>
+      <ListItem button>
+        {/* <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon> */}
+        <ListItemText primary="Grammar" />
+      </ListItem>
+      <ListItem button>
+        {/* <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon> */}
+        <ListItemText primary="Sciences" />
+      </ListItem>
+
+    </List>
+
         </Grid>
-        <Grid item xs={12} md={8} lg={8}>
+        <Grid item xs={12} md={9} lg={9}>
         <div className={classes.section1}>
       <Paper className={classes.PapperSection1}>
               <Section2Card
                 image={learn}
                 infos=" Enroll Now"
                 link="/courses"
-                infoText="Interactive Courses"
-                infoTextContent=" acquire new knowledge, skills, work on real project"
+                infoText="HR"
+                infoTextContent="Enroll this couse to know everything about HR"
               />
             </Paper>
            
@@ -61,35 +124,51 @@ export default function MainCard2() {
                 image={cardimg}
                 infos=" Enroll Now"
                 link="/courses"
-                infoText="Mentorship"
-                infoTextContent="Become a mentors, support our Student and Teachers"
+                infoText="Bussiness"
+                infoTextContent="Manage your own Bussinnes, Enroll and Lern everything"
                 
               />
             </Paper>
             <Paper className={classes.PapperSection1}>
               <Section2Card
                 image={money}
-                infos="Donate"
+                infos="Enroll Now"
                 link="/donation"
-                infoText="Make a Donation"
+                infoText="Basic Maths"
                 infoTextContent="Help us, all the fund goes for Education purpose, "
               />
             </Paper>
             <Paper className={classes.PapperSection1}>
               <Section2Card
                 image={money}
-                infos="Invest"
+                infos="Enroll Now"
                 link="/investment"
-                infoText="Investment Opportunities"
-                infoTextContent="Invest in Education, get realtime update and report"
+                infoText="JavaScript"
+                infoTextContent="Best Js course for beginner"
+              />
+            </Paper>
+            <Paper className={classes.PapperSection1}>
+              <Section2Card
+                image={money}
+                infos="Enroll Now"
+                link="/investment"
+                infoText="Python"
+                infoTextContent="Best Python course for beginner"
+              />
+            </Paper>
+            <Paper className={classes.PapperSection1}>
+              <Section2Card
+                image={money}
+                infos="Enroll Now"
+                link="/investment"
+                infoText="Grammar"
+                infoTextContent="Best Python course for beginner"
               />
             </Paper>
       </div>
     
         </Grid>
-
       </Grid>
-      
-    </Container>
+      </Container>
   );
 }
