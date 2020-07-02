@@ -17,6 +17,8 @@ import Button from "@material-ui/core/Button";
 //import { Link } from '@material-ui/core';
 import { Link } from "react-router-dom";
 import { Grid, Container } from '@material-ui/core';
+import {logoutUser} from "../redux/Actions/authActions"
+import { connect } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -93,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar() {
+ function NavBar(logoutUser) {
   const classes = useStyles();
   // const [spacing, setSpacing] = React.useState(2);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -162,6 +164,10 @@ export default function NavBar() {
             {" "}
             <Button variant="contained" color="primary" className={classes.navButton}>Sign up</Button>
           </Link>
+          
+           
+         
+          
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -217,6 +223,13 @@ export default function NavBar() {
             {" "}
             <Button variant="contained" color="primary" className={classes.navButton}>Sign up</Button>
           </Link>
+          <Button
+             variant="contained"
+              color="primary"
+               className={classes.navButton}
+               onClick={logoutUser}
+               >
+              Logout</Button>
            
           </div>
           <div className={classes.sectionMobile}>
@@ -238,3 +251,4 @@ export default function NavBar() {
       </Container>
   );
 }
+export default connect(null,{logoutUser})(NavBar )

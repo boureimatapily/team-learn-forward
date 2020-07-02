@@ -1,13 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import { TextField, Button, Typography, Grid, Container } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import {loginUser} from "../redux/Actions/authActions"
+import { connect } from "react-redux";
 
 // import FacebookIcon from "@material-ui/icons/Facebook";
 // import TwitterIcon from "@material-ui/icons/Twitter";
 
-const useStyles = makeStyles((theme) => ({
+const styles = {
  
   loginSection: {
     paddingLeft: 20,
@@ -23,11 +25,38 @@ const useStyles = makeStyles((theme) => ({
       fontWeight:"bold",
       marginRight:10
   }
-}));
+};
 
-export default function Login() {
-  const classes = useStyles();
 
+class Login extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      email:"",
+      password:""
+    };
+  }
+
+  handleChange = (e) =>{
+    this.setState({
+      [e.target.name]:e.target.value
+    })
+  }
+  onLogin = ()=>{
+    
+  this.props.history.push('/');
+}
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { dispatch } = this.props;
+    const { email, password } = this.state;
+
+    this.props.loginUser(email, password,this.onLogin);
+  };
+
+    
+  render() {
+    const { classes } = this.props;
   return (
     <Container fixed >
       <Grid container> 
@@ -36,7 +65,7 @@ export default function Login() {
     <div className={classes.root}>
       <Paper className={classes.loginSection}>
         <h1>Log In to Learn forward</h1>
-        <form autoComplete={"false"} className={classes.formSection}>
+        <form autoComplete={"false"} className={classes.formSection} onSubmit={this.handleSubmit} >
           <TextField
             id="standard-basic"
             label="Email Address"
@@ -47,7 +76,7 @@ export default function Login() {
             name="email"
             autoFocus
             // value={this.state.email}
-            // onChange={this.handleChange}
+            onChange={this.handleChange}
           />
           <div className="validator">
             <TextField
@@ -59,7 +88,7 @@ export default function Login() {
               type="password"
               id="password"
               //   value={this.state.password}
-              //   onChange={this.handleChange}
+                onChange={this.handleChange}
             />
           </div>
           <Typography
@@ -120,3 +149,14 @@ export default function Login() {
     </Container>
   );
 }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    isLoggingIn: state.auth.isLoggingIn,
+    loginError: state.auth.loginError,
+    isAuthenticated: state.auth.isAuthenticated
+  };
+}
+
+export default  withStyles(styles)(connect(mapStateToProps,{loginUser})(Login))
