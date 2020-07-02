@@ -4,10 +4,53 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router} from 'react-router-dom';
+import { Provider, useSelector } from "react-redux";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+
+import { isLoaded } from "react-redux-firebase";
+// import { createFirestoreInstance } from "redux-firestore";
+import Appstore from './redux/Store';
+
+
+
+const theme = createMuiTheme();
+
+
+// Wait For Auth To Load
+// function AuthIsLoaded({ children }) {
+//   const auth = useSelector(state => state.firebase.auth);
+//   if (!isLoaded(auth))
+//     return (
+//       <div 
+//       style={{
+//         left: "50%",
+//         right: "50%",
+//         top: "40%",
+//         position: "absolute"
+//       }}>
+//         Loading......
+//       </div>
+//     );
+//   return children;
+// }
+
+const store = Appstore();
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router> <App /> </Router>
+   <Provider store={store}>
+    {/* <ReactReduxFirebaseProvider {...rrfProps}> */}
+      <MuiThemeProvider theme={theme}>
+        <Router>
+          {/* <AuthIsLoaded> */}
+            <App />
+          {/* </AuthIsLoaded> */}
+        </Router>
+      </MuiThemeProvider>
+    {/* </ReactReduxFirebaseProvider> */}
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
