@@ -9,7 +9,7 @@ import {
     VERIFY_SUCCESS,
   } from "../type";
 
-let state = {
+const Initialstate = {
     isLoggingIn: false,
     isLoggingOut: false,
     isVerifying: false,
@@ -19,7 +19,7 @@ let state = {
     user: {}
 };
 
-  export default (state = {}, action) => {
+  export default (state = Initialstate , action) => {
     switch (action.type) {
         case LOGIN_REQUEST:
           return {
