@@ -1,39 +1,23 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import { TextField, Button, Typography } from "@material-ui/core";
+import { TextField, Button, Typography, Grid, Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
 // import FacebookIcon from "@material-ui/icons/Facebook";
 // import TwitterIcon from "@material-ui/icons/Twitter";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-    marginLeft:50,
-      marginRight:50
-  },
+ 
   loginSection: {
-    width: 400,
-    height: 450,
-    paddingLeft: 50,
+    paddingLeft: 20,
+    paddingRight:20,
     marginTop: 50,
   },
-  formSection: {
-    width: 350,
-  },
+
   otheraccounts:{
       display:"flex",
-      alignItems:"center",
-      justifyContent:"center",
-      
+      marginBottom:10
   },
   btnotheraccounts:{
       fontWeight:"bold",
@@ -45,6 +29,10 @@ export default function Login() {
   const classes = useStyles();
 
   return (
+    <Container fixed >
+      <Grid container> 
+      <Grid item xs md lg > </Grid>
+      <Grid item xs={12} md={6} lg={6} > 
     <div className={classes.root}>
       <Paper className={classes.loginSection}>
         <h1>Log In to Learn forward</h1>
@@ -126,5 +114,9 @@ export default function Login() {
         </div>
       </Paper>
     </div>
+    </Grid>
+    <Grid item xs md lg > </Grid>
+    </Grid>
+    </Container>
   );
 }

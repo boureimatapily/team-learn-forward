@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import { TextField, Button, Typography } from "@material-ui/core";
+import { TextField, Button, Typography, Grid, Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 // import {
 //     MuiPickersUtilsProvider,
@@ -22,32 +22,17 @@ import { Link } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-    marginLeft:50,
-      marginRight:50
+  root:{
+    display:"flex",
   },
   loginSection: {
-    width: 400,
-    height: 700,
-    paddingLeft: 50,
+    paddingRight:20,
+    paddingLeft: 20,
     marginTop: 20,
   },
-  formSection: {
-    width: 350,
-  },
+ 
   otheraccounts:{
     display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
     
 },
 btnotheraccounts:{
@@ -61,7 +46,11 @@ export default function Login() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Container fixed className={classes.root}>
+      <Grid container> 
+      <Grid item xs md lg > </Grid>
+      <Grid item xs={12} md={4} lg={4} > 
+    <div>
       <Paper className={classes.loginSection}>
         <h1>Get Started for Free</h1>
         <form autoComplete={"false"} className={classes.formSection}>
@@ -108,11 +97,11 @@ export default function Login() {
             <div className={classes.TwoColumns}>
               <div className={classes.Column}>
                 <TextField
-                  id="firstname"
-                  label="Firstname"
-                  placeholder="Firstname"
+                  id=" fullname"
+                  label="fullname"
+                  placeholder="fullname"
                   fullWidth
-                  name="firstname"
+                  name="name"
                   type="text"
                 //   helperText={errors.firstname}
                 //   error={errors.firstname ? true : false}
@@ -120,7 +109,7 @@ export default function Login() {
                 //   onChange={handleChange}
                 />
               </div>
-              <div className={classes.Column}>
+              {/* <div className={classes.Column}>
                 <TextField
                   id="lastname"
                   label="Lastname"
@@ -133,7 +122,7 @@ export default function Login() {
                 //   value={values.lastname}
                 //   onChange={handleChange}
                 />
-              </div>
+              </div> */}
             </div>
             <div className={classes.TwoColumns}>
               <div className={classes.Column}>
@@ -171,7 +160,7 @@ export default function Login() {
                 </MuiPickersUtilsProvider>
               </div> */}
             </div>
-            <div className="validator">
+            {/* <div className="validator">
               <FormControl
                 component="fieldset"
                 className={classes.textField}
@@ -204,7 +193,7 @@ export default function Login() {
                 </RadioGroup>
               </FormControl>
           
-            </div>
+            </div> */}
 
             <Typography
               variant="body2"
@@ -265,5 +254,9 @@ export default function Login() {
       
       </Paper>
     </div>
+    </Grid>
+    <Grid item xs md lg > </Grid>
+    </Grid>
+    </Container>
   );
 }

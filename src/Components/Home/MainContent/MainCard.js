@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(5),
     },
     marginTop: 20,
-    marginLeft: "10%",
+    justifyContent:"space-around"
   },
    PapperSection1: {
     width: 250,
     height: 200,
+  
   },
   
 }));
