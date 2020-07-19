@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import reduxThunk from "redux-thunk";
 import { verifyAuth } from "./Actions/authActions";
 import rootReducer from "./Reducers/rootReducer";
-import { firestoreReducer, reduxFirestore } from "redux-firestore";
+import { reduxFirestore } from "redux-firestore";
 
 
 

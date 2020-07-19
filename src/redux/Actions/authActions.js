@@ -1,5 +1,5 @@
 import firebase from "../../Config/fbconfig";
-import { reduxFirestore, getFirestore} from 'redux-firestore'
+// import { reduxFirestore, getFirestore} from 'redux-firestore'
 
 import {
   LOGIN_REQUEST,

@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import { TextField, Button, Typography, Grid, Container } from "@material-ui/core";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {loginUser} from "../redux/Actions/authActions"
 import { connect } from "react-redux";
 
@@ -48,7 +48,6 @@ class Login extends React.Component {
 }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { dispatch } = this.props;
     const { email, password } = this.state;
 
     this.props.loginUser(email, password,this.onLogin);

@@ -4,11 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router} from 'react-router-dom';
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 
-import { isLoaded } from "react-redux-firebase";
 // import { createFirestoreInstance } from "redux-firestore";
 import Appstore from './redux/Store';
 
