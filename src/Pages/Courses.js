@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import { withStyles } from "@material-ui/styles";
 
-export default class Courses extends Component {
-    render() {
-        return (
-            <div>
-                 <h1>Courses</h1>
-            </div>
-        )
-    }
+const styles = {}
+
+class Courses extends React.Component{
+ 
+  render(){
+     const { classes } = this.props;
+    return(
+        <h1>ALL courses</h1>
+    )
+  }
 }
+export default  withStyles(styles)(Courses)
