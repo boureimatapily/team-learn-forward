@@ -8,7 +8,7 @@ import NavBar from "./Components/NavBar";
 import Investment from "./Pages/Investment";
 import Donation from "./Pages/Donation";
 import { connect } from "react-redux";
-import AppRoute from "./util/AppRoute";
+// import AppRoute from "./util/AppRoute";
 
 class App extends Component {
 
@@ -33,7 +33,7 @@ class App extends Component {
       <React.Fragment>
         <NavBar />
         <Switch>
-          <AppRoute
+          <Route
             exact
             path="/"
             component={Home}
