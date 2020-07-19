@@ -17,7 +17,7 @@ import Button from "@material-ui/core/Button";
 //import { Link } from '@material-ui/core';
 import { Link } from "react-router-dom";
 import { Grid, Container } from '@material-ui/core';
-import {logoutUser} from "../redux/Actions/authActions"
+// import {logoutUser} from "../redux/Actions/authActions"
 import { connect } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
@@ -223,13 +223,7 @@ const useStyles = makeStyles((theme) => ({
             {" "}
             <Button variant="contained" color="primary" className={classes.navButton}>Sign up</Button>
           </Link>
-          <Button
-             variant="contained"
-              color="primary"
-               className={classes.navButton}
-               onClick={logoutUser}
-               >
-              Logout</Button>
+         
            
           </div>
           <div className={classes.sectionMobile}>
@@ -251,4 +245,4 @@ const useStyles = makeStyles((theme) => ({
       </Container>
   );
 }
-export default connect(null,{logoutUser})(NavBar )
+export default connect(null)(NavBar )

@@ -1,22 +1,22 @@
-import React from 'react'
-import { withStyles } from "@material-ui/styles";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import MainCard2 from "../Components/Home/MainContent/MainCard2";
 
-const styles = {
-    root: {
-        flexGrow: 1,
-      },
-      
-}
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    marginTop:50,
+  },
+  
+}));
 
-class Courses extends React.Component{
+export default function Courses() {
+  const classes = useStyles();
  
-  render(){
-     const { classes } = this.props;
-    return(
-        <div style={classes.root}>
-            <h1>ALL courses</h1>
-        </div>
-    )
-  }
+  return (
+    <div className={classes.root}>
+        <MainCard2 />
+     
+    </div>
+  );
 }
-export default  withStyles(styles)(Courses)

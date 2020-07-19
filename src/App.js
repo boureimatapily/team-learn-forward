@@ -2,30 +2,16 @@ import React, { Component } from "react";
 import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
-import Courses from "./Pages/Courses";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Investment from "./Pages/Investment";
 import Donation from "./Pages/Donation";
 import { connect } from "react-redux";
+import Courses from "./Pages/Courses";
+
 // import AppRoute from "./util/AppRoute";
 
 class App extends Component {
-
-
-// // Management authentification user first loading
-// componentDidMount() {
-//   // console.log(this.props);
-//   const authUser = this.props.auth;
-//   // console.log(authUser);
-//   if (authUser.uid) {
-//     store.dispatch({ type: LOGIN_SUCCESS });
-//   } else {
-//     store.dispatch(signout());
-//   }
-// }
-
-
 
 
   render() {
@@ -43,9 +29,10 @@ class App extends Component {
          
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/courses" component={Courses} />
           <Route exact path="/donation" component={Donation} />
           <Route exact path="/investment" component={Investment} />
+          <Route exact path="/courses" component={Courses} />
+
         </Switch>
       </React.Fragment>
     );
