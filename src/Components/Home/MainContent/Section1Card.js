@@ -13,24 +13,31 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 250,
     maxHeight: 300,
-    backgroundColor:"#a74fff",
+    backgroundColor:"#e3e3e3",
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    flexDirection:"column"
+
    
   },
   media: {
     height: 80,
     width: 80,
-    marginLeft: "10%",
+    marginLeft: "25%",
     marginRight: "10%",
     marginTop:20,
     borderRadius:30,
+    
   },
   cardButton: {
     height: 60,
     width: 150,
-    backgroundColor:"#810aff"
+    backgroundColor:"#810aff",
+    fontWeight:"bold"
   },
   cardinfos:{
-    paddingLeft:20,
+    marginLeft:"10%",
     color:"#0a0a0a",
     fontWeight:"bold"
     
@@ -47,7 +54,7 @@ export default function Section1Card({
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <Link to={link}>
         <Card className={classes.root}>
           <CardActionArea>

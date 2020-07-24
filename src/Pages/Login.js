@@ -5,7 +5,7 @@ import { TextField, Button, Typography, Grid, Container } from "@material-ui/cor
 import { Link } from "react-router-dom";
 import {loginUser} from "../redux/Actions/authActions"
 import { connect } from "react-redux";
-import mimi from '../Images/learn.png'
+import mimi from '../Images/login.png'
 
 
 const styles = {

@@ -27,8 +27,10 @@ const useStyles = makeStyles((theme) => ({
    PapperSection1: {
     width: 250,
     height: 200,
-  
   },
+  card:{
+    paddingLeft:200
+  }
   
 }));
 
@@ -45,6 +47,7 @@ export default function MainCard() {
                 link="/courses"
                 infoText="Interactive Courses"
                 infoTextContent=" acquire new knowledge, skills, work on real project"
+                
               />
             </Paper>
            
@@ -55,6 +58,7 @@ export default function MainCard() {
                 link="/courses"
                 infoText="Mentorship"
                 infoTextContent="Become a mentors, support our Student and Teachers"
+               
                 
               />
             </Paper>
@@ -64,7 +68,8 @@ export default function MainCard() {
                 infos="Donate"
                 link="/donation"
                 infoText="Make a Donation"
-                infoTextContent="Help us, all the fund goes for Education purpose, "
+                infoTextContent="Help us, all the fund goes for Education purpose"
+              
               />
             </Paper>
             <Paper className={classes.PapperSection1}>
@@ -74,6 +79,7 @@ export default function MainCard() {
                 link="/investment"
                 infoText="Investment Opportunities"
                 infoTextContent="Invest in Education, get realtime update and report"
+               
               />
             </Paper>
       </div>

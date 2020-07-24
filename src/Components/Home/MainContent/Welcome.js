@@ -52,7 +52,7 @@ export default function Welcome() {
             {" "}
             Gather Knowledge Without Leaving Home. Learn, Validate, Collaborate.
           </h4>
-          <Link to="/">
+          <Link to="/login">
             {" "}
             <Button
               variant="contained"

@@ -3,12 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import { TextField, Button, Typography, Grid, Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
- 
-  import LinkMUI from "@material-ui/core/Link";
-  
-
-
+import LinkMUI from "@material-ui/core/Link";
+import mimi from '../Images/signup.png'
 
 const useStyles = makeStyles((theme) => ({
   root:{
@@ -26,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
 },
 btnotheraccounts:{
     fontWeight:"bold",
-    marginRight:10
+    marginRight:10,
+    marginBottom:10
 }
  
 }));
@@ -37,10 +34,14 @@ export default function Login() {
   return (
     <Container fixed className={classes.root}>
       <Grid container> 
-      <Grid item xs md lg > </Grid>
-      <Grid item xs={12} md={4} lg={4} > 
+      <Grid item xs={12} sm={12} md={6} lg={6} >
+        <Paper elevation={0} style={{width:400, marginRight:0}} >
+            <img src={mimi} alt="photo_logo" style={{width:500, height:400}} />
+        </Paper>
+       </Grid>
+      <Grid item xs={12} sm={12} md={6} lg={6} > 
     <div>
-      <Paper className={classes.loginSection}>
+      <Paper className={classes.loginSection} elevation={5}>
         <h1>Get Started for Free</h1>
         <form autoComplete={"false"} className={classes.formSection}>
             <TextField
@@ -52,7 +53,6 @@ export default function Login() {
               autoFocus
             //   value={values.email}
             //   onChange={handleChange}
-            //   helperText={errors.email}
             //   error={errors.email ? true : false}
             />
             <div className={classes.TwoColumns}>
@@ -76,8 +76,7 @@ export default function Login() {
                   label="Confirm Password"
                   fullWidth
                   name="confirmPassword"
-                //   helperText={errors.confirmPassword}
-                //   error={errors.confirmPassword ? true : false}
+              
                 //   value={values.confirmPassword}
                 //   onChange={handleChange}
                 />
@@ -92,26 +91,12 @@ export default function Login() {
                   fullWidth
                   name="name"
                   type="text"
-                //   helperText={errors.firstname}
-                //   error={errors.firstname ? true : false}
+              
                 //   value={values.firstname}
                 //   onChange={handleChange}
                 />
               </div>
-              {/* <div className={classes.Column}>
-                <TextField
-                  id="lastname"
-                  label="Lastname"
-                  placeholder="Lastname"
-                  fullWidth
-                  name="lastname"
-                  type="text"
-                //   helperText={errors.lastname}
-                //   error={errors.lastname ? true : false}
-                //   value={values.lastname}
-                //   onChange={handleChange}
-                />
-              </div> */}
+             
             </div>
             <div className={classes.TwoColumns}>
               <div className={classes.Column}>
@@ -121,68 +106,14 @@ export default function Login() {
                   fullWidth
                   name="handle"
                   type="text"
-                //   helperText={errors.handle}
-                //   error={errors.handle ? true : false}
+            
                 //   value={values.handle}
                 //   onChange={handleChange}
                 />
               </div>
-              {/* <div className={classes.Column}>
-                <MuiPickersUtilsProvider >
-                  <Grid container justify="space-around">
-                    <KeyboardDatePicker
-                      fullWidth
-                      required
-                    //   helperText={errors.dateValue}
-                    //   error={errors.dateValue ? true : false}
-                      margin="normal"
-                      id="date-picker-dialog"
-                      label="Birthday"
-                      format="MM/dd/yyyy"
-                    //   value={values.dateValue}
-                    //   onChange={handleDateChange}
-                      KeyboardButtonProps={{
-                        "aria-label": "change date"
-                      }}
-                    />
-                  </Grid>
-                </MuiPickersUtilsProvider>
-              </div> */}
+           
             </div>
-            {/* <div className="validator">
-              <FormControl
-                component="fieldset"
-                className={classes.textField}
-                fullWidth
-              >
-                <FormLabel
-                  component="legend"
-                  className={classes.textLeft}
-                  e
-                >
-                  Gender
-                </FormLabel>
-                <RadioGroup
-                  aria-label="gender"
-                  name="gender"
-                //   value={values.gender}
-                //   onChange={handleChange}
-                  row
-                >
-                  <FormControlLabel
-                    value="female"
-                    control={<Radio color="primary" />}
-                    label="Female"
-                  />
-                  <FormControlLabel
-                    value="male"
-                    control={<Radio color="primary" />}
-                    label="Male"
-                  />
-                </RadioGroup>
-              </FormControl>
-          
-            </div> */}
+        
 
             <Typography
               variant="body2"
@@ -244,7 +175,7 @@ export default function Login() {
       </Paper>
     </div>
     </Grid>
-    <Grid item xs md lg > </Grid>
+    
     </Grid>
     </Container>
   );
