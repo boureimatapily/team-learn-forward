@@ -106,7 +106,7 @@ export default function MainCard2() {
               <Section2Card
                 image={learn}
                 infos=" Enroll Now"
-                link="/courses"
+                link="/login"
                 infoText="HR"
                 infoTextContent="Enroll this couse to know everything about HR"
               />
@@ -116,7 +116,7 @@ export default function MainCard2() {
               <Section2Card
                 image={cardimg}
                 infos=" Enroll Now"
-                link="/courses"
+                link="/login"
                 infoText="Bussiness"
                 infoTextContent="Manage your own Bussinnes, Enroll and Lern everything"
                 
@@ -126,7 +126,7 @@ export default function MainCard2() {
               <Section2Card
                 image={money}
                 infos="Enroll Now"
-                link="/donation"
+                link="/login"
                 infoText="Basic Maths"
                 infoTextContent="Help us, all the fund goes for Education purpose, "
               />
@@ -135,7 +135,7 @@ export default function MainCard2() {
               <Section2Card
                 image={money}
                 infos="Enroll Now"
-                link="/investment"
+                link="/login"
                 infoText="JavaScript"
                 infoTextContent="Best Js course for beginner"
               />
@@ -144,7 +144,7 @@ export default function MainCard2() {
               <Section2Card
                 image={money}
                 infos="Enroll Now"
-                link="/investment"
+                link="/login"
                 infoText="Python"
                 infoTextContent="Best Python course for beginner"
               />
@@ -153,7 +153,7 @@ export default function MainCard2() {
               <Section2Card
                 image={money}
                 infos="Enroll Now"
-                link="/investment"
+                link="//login"
                 infoText="Grammar"
                 infoTextContent="Best Python course for beginner"
               />
