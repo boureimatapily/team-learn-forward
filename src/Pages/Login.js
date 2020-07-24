@@ -5,11 +5,13 @@ import { TextField, Button, Typography, Grid, Container } from "@material-ui/cor
 import { Link } from "react-router-dom";
 import {loginUser} from "../redux/Actions/authActions"
 import { connect } from "react-redux";
+import mimi from '../Images/learn.png'
 
-// import FacebookIcon from "@material-ui/icons/Facebook";
-// import TwitterIcon from "@material-ui/icons/Twitter";
 
 const styles = {
+  root:{
+    marginTop:50
+  },
  
   loginSection: {
     paddingLeft: 20,
@@ -23,7 +25,8 @@ const styles = {
   },
   btnotheraccounts:{
       fontWeight:"bold",
-      marginRight:10
+      marginRight:10,
+      marginBottom:20
   }
 };
 
@@ -58,8 +61,12 @@ class Login extends React.Component {
     const { classes } = this.props;
   return (
     <Container fixed >
-      <Grid container> 
-      <Grid item xs md lg > </Grid>
+      <Grid container className={classes.root}> 
+      <Grid item xs={12} sm={12} md={6} lg={6} >
+        <Paper elevation={0} style={{width:400}} >
+            <img src={mimi} alt="photo_logo" style={{width:400, height:400}} />
+        </Paper>
+       </Grid>
       <Grid item xs={12} md={6} lg={6} > 
     <div className={classes.root}>
       <Paper className={classes.loginSection}>
@@ -143,7 +150,6 @@ class Login extends React.Component {
       </Paper>
     </div>
     </Grid>
-    <Grid item xs md lg > </Grid>
     </Grid>
     </Container>
   );
